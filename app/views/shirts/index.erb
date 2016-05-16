@@ -1,0 +1,12 @@
+<div class="container">
+  <% Shirt.all.each do |shirt| %>
+    <div class=shirt-shower id="shirt<%=shirt.id%>">
+      <p> <a href="/shirts/<%= shirt.id %>">SKU <%= shirt.id %></a> 
+      <img class="shirt-image" src="/media/shirt.png"><br><br>
+      <p class="shirt-content"> <%= shirt.content %></p>
+      $<%=shirt.price%>
+      <br>
+      <a href="/purchases/new/<%=shirt.id%>"><button>Add To Cart</button></p></a>
+    </div>
+  <% end %>
+</div>

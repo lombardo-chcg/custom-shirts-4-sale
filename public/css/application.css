@@ -1,0 +1,47 @@
+header {
+  margin-top: 1%;
+  text-align: center;
+}
+nav {
+  text-align: center;
+}
+.container,
+.show-shirt, 
+.shirt-designer {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  /*border: 1px dotted black;*/
+}
+
+.session-box {
+  margin: auto;
+}
+
+.shirt-shower {
+  position: relative;
+  border: 1px dotted plum;
+  float: left;
+  width: 33%;
+}
+
+.shirt-content {
+  position: absolute;
+  bottom: 55%;
+  left: 40%;
+  font-size: .75em;
+  color: tomato;
+}
+
+.shirt-image {
+  width: 100px;
+  height: 100px;
+}
+
+.shirt-designer {
+  text-align: center;
+}
+
+#nice-hr {
+  clear: both;
+}

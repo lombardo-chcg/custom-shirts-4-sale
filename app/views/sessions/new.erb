@@ -1,0 +1,13 @@
+<section class='session-box'>
+    <%if @errors %>
+      <% @errors.each do |error| %>
+        <p><%= error %></p>
+      <% end %>
+    <% end %>      
+  <form id="login-form" action='/login' method='post'>
+    <input type="text" name="email" placeholder="email"><br>
+    <input type="text" name="password" placeholder="password"><br><br>
+    <input type="submit" value="Submit">  
+  </form>
+</section>
+  

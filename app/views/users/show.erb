@@ -1,0 +1,34 @@
+<div class='container'>
+  <p> Hello, <%= current_user.name %> </p>
+  <h3> shirts you have purchased:</h3>
+  <% current_user.purchased_shirts.each do |shirt| %>
+    <div class=shirt-shower id="shirt<%=shirt.id%>">
+      <p> <a href="/shirts/<%= shirt.id %>">SKU <%= shirt.id %></a> 
+      <img class="shirt-image" src="/media/shirt.png"><br><br>
+      <p class="shirt-content"> <%= shirt.content %></p>
+      <a href="/purchases/new/<%=shirt.id%>"><button>Add To Cart</button></p></a>
+      <p>designer: <%=shirt.designer.name%></p>
+    </div>
+  <% end %>  
+  <hr id="nice-hr">
+    <h3> shirts you have designed:</h3>
+  <% current_user.designed_shirts.each do |shirt| %>
+    <div class=shirt-shower id="shirt<%=shirt.id%>">
+      <p> <a href="/shirts/<%= shirt.id %>">SKU <%= shirt.id %></a> 
+      <img class="shirt-image" src="/media/shirt.png"><br><br>
+      <p class="shirt-content"> <%= shirt.content %></p>
+      <a href="/purchases/new/<%=shirt.id%>"><button>Add To Cart</button></p></a>
+    </div>
+  <% end %> 
+    <br>
+    <hr id='nice-hr'>
+    <h3> your total sales </h3>
+    <% total_sales = 0 %>
+    <% num_orders = 0 %>
+    <%current_user.sales.each do | purchase |%>
+      <% total_sales += purchase.shirt.price %>
+      <% num_orders += 1%>
+    <% end %> 
+    $<%= total_sales %>
+    <p>number of orders: <%= num_orders %></p>
+</div>
