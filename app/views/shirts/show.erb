@@ -1,0 +1,10 @@
+<div class="show-shirt">
+  <p>Designer: <%= @shirt.designer.name %></p>
+  <p>$<%= @shirt.price %></p>
+  <a href="/purchases/new/<%= @shirt.id %>"><button>Add To Cart</button></a></p>
+    <div class=shirt-shower id="shirt<%=@shirt.id%>">
+      <p> <a href="/shirts/<%= @shirt.id %>">SKU <%= @shirt.id %></a> 
+      <img class="shirt-image" src="/media/shirt.png"><br><br>
+      <p class="shirt-content"> <%= @shirt.content %></p>
+    </div>
+</div>

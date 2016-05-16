@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title>Bob's House Of Shirts</title>
+</head>
+<body>
+  <header><h1>WELCOME TO BOB'S SHIRTS</h1></header>
+  <% if user_logged_in? %>
+    <nav>
+      <a href='/'>Browse Shirts</a>
+      <a href='/shirts/new'>Design A Shirt</a>
+      <a href='/users/show'>Your Profile</a>
+      <a href='logout'>Logout</a>
+    </nav>
+  <% else %>
+    <nav>
+      <a href='/'>Browse Shirts</a>
+      <a href='/users/new'>Register</a>
+      <a href='/login'>Login</a>
+    </nav>  
+  <% end %>  
+  <%= yield %>
+</body>
+</html>

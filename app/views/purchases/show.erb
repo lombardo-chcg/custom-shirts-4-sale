@@ -1,0 +1,6 @@
+<div class="container">
+  Hey thanks for your purchase!
+  Your purchase number is <%= current_user.purchases.last.id %>
+  <br>
+  <a href="/users/<%=current_user.id%>">View your account</a>
+</div>
