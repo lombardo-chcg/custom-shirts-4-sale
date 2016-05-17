@@ -8,7 +8,7 @@ end
 
 post '/shirts' do
   @shirt = current_user.designed_shirts.new(content: params[:content], price: 19.99)
-  
+
   if @shirt.save
     redirect "/shirts/#{@shirt.id}"
   else
@@ -19,5 +19,10 @@ end
 
 get '/shirts/:id' do
   @shirt = Shirt.find(params[:id].to_i)
-  erb :"shirts/show"
+
+  if request.xhr?
+    erb :'shirts/show', layout: false
+  else
+    erb :"shirts/show"
+  end
 end

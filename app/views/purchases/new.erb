@@ -1,11 +1,11 @@
-<div class='container'>
+<div class='confirm-purchase-container'>
   <%if @errors %>
     <% @errors.each do |error| %>
       <p><%= error %></p>
     <% end %>
-  <% end %>  
+  <% end %>
   <p>please confirm your purchase of shirt # <%= @shirt.id %></p>
   <form action="/purchases/<%= @shirt.id %>" method="post">
     <input type="submit" value="Submit">
-  </form>  
+  </form>
 </div>

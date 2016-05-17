@@ -6,7 +6,7 @@ nav {
   text-align: center;
 }
 .container,
-.show-shirt, 
+.show-shirt,
 .shirt-designer {
   margin: 20px auto;
   width: 600px;
@@ -15,7 +15,8 @@ nav {
 }
 
 .session-box {
-  margin: auto;
+  margin-top: 2%;
+  text-align: center;
 }
 
 .shirt-shower {
@@ -23,6 +24,12 @@ nav {
   border: 1px dotted plum;
   float: left;
   width: 33%;
+}
+
+.shirt-shower-single,
+.confirm-purchase-container {
+  text-align: center;
+  border: 1px dotted plum;
 }
 
 .shirt-content {
@@ -33,9 +40,22 @@ nav {
   color: tomato;
 }
 
+.shirt-content-single {
+  position: absolute;
+  bottom: 55%;
+  left: 49%;
+  font-size: .75em;
+  color: tomato;
+}
+
 .shirt-image {
   width: 100px;
   height: 100px;
+}
+
+.shirt-image-single {
+  width: 200px;
+  height: 200px;
 }
 
 .shirt-designer {
@@ -44,4 +64,12 @@ nav {
 
 #nice-hr {
   clear: both;
+}
+
+.popup {
+  display: none;
+}
+
+#close {
+  position: absolute;
 }
